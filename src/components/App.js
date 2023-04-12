@@ -4,13 +4,9 @@ import itemData from "../data/items";
 import { useState } from "react";
 
 function App() {
-  const [color, setColor] = useState(false);
-  // replace 'false' with a state variable that can be toggled between true and false
-  // this will be used for the Dark Mode Toggle feature
-  function handleColor() {
-    setColor((color) => !color);
-  }
 
+  const [color, setColor] = useState(false);
+  const handleColor= () => setColor((color) => !color);
   const appClass = color ? "App dark" : "App light";
 
   return (
